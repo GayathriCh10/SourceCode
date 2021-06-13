@@ -1,0 +1,27 @@
+
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1>Admin</h1> 
+   <div class="clr"></div>
+    
+<div class="container">
+   
+      
+      <label for="fname">Admin id</label>
+      <input type="text" id="adminId" placeholder="admin id.." #adminId >
+  
+      <label for="lname">Password</label>
+      <input type="password"  id="password" placeholder="Password.. " #password>
+      
+<br>
+      <div class="header">
+        <nav>
+           <button class="active" type = "submit" (click)='adminLogin(adminId.value,password.value)'>Login</button>
+        </nav>
+        <div class ="span2" *ngIf="!message"><h4 style="color:red" >Invalide username or passowrd</h4></div>
+      </div>
+  </div>
+
+
+</div>
+</div>

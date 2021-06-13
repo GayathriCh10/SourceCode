@@ -1,0 +1,39 @@
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1> Update FLight Details</h1> 
+   <div class="clr"></div>
+    
+<div class="container">
+    <div class="action">
+ 
+      <label for="lname">Depature</label>
+      <input type="text"   [(ngModel)]='flight.depature'>
+      <label for="lname">Arrival</label>
+      <input type="text" [(ngModel)]='flight.arrival'>
+      <label for="lname">Start time</label>
+      <input type="text" [(ngModel)]='flight.startTime'>
+      <label for="lname">End Time</label>
+      <input type="text"   [(ngModel)]='flight.endTime'>
+      <label for="lname">Duration</label>
+      <input type="text" [(ngModel)]='flight.duration'>
+      <label for="lname">Price</label>
+      <input type="number" [(ngModel)]='flight.price'>
+      <label for="lname">Meal Preference</label>
+      <select value="meal" [(ngModel)]='flight.meals'>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+      </select>    
+      
+      <label for="lname">Date</label>
+      <input type="date"  [(ngModel)]='flight.travelDate'>
+      <div class="header">
+       
+         <button  class="active" (click)='update()'>Update Flight</button> 
+       
+       </div>
+      </div>
+  </div>
+
+
+</div>
+</div>

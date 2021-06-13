@@ -1,0 +1,48 @@
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1> Book your Ticket</h1> 
+   <div class="clr"></div>
+    
+<div class="container">
+   
+      <li *ngFor="let a of flights;index as i;">
+        <h2>Journey Details</h2>
+      <span > {{ a.depature}}  ->:  </span>
+       <span  >  {{ a.arrival}} </span> <br> <br>
+        <span > {{ a.duration}}</span>  <br> <br>
+        <span > {{ a.startTime}}  ->:   </span> 
+      <span >   {{ a.endTime}} </span> <br> <br>
+      <label>Fare summary :</label> <span > {{a.price}} </span><br><br>
+      <label>Airline Name :</label> <span > {{a.airlineName}} </span> <br><br>
+      <label>Flight Number :</label> <span  > {{a.flightNumber}} </span><br><br>
+
+      </li>
+       
+      <label for="fname">First Name</label>
+      <input type="text"  name="firstname" placeholder="First name.." [(ngModel)]='bookFlight.firstName'>
+  
+      <label for="lname">Last Name</label>
+      <input type="text"  name="lastname" placeholder="Last name.." [(ngModel)]='bookFlight.lastName'>
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" [(ngModel)]='bookFlight.gender'>
+  
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        
+      </select>
+
+      
+      
+      <h2>Contact Details</h2>
+      <label for="lname" id="lname" #lname>Email</label>
+      <input type="email"   placeholder="Email.." [(ngModel)]='bookFlight.email'>
+      <label for="lname">Contact Number</label>
+      <input type="number"  placeholder="Conatact Number.." [(ngModel)]='bookFlight.contactNumber'>
+      <button (click)="bookTicket()"> Confirm Booking</button>
+      
+   
+  </div>
+
+
+</div>
+</div>

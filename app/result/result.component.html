@@ -1,0 +1,69 @@
+
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1> Flight Details</h1> 
+   <div class="clr"></div>
+   <div class="tab-content">
+
+   
+           <table class="tabprop">
+               <tr>
+                  
+               <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                <span class="fs-inherit c-inherit">Airlines</span></a></th>
+               <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                <span class="fs-inherit c-inherit">Departure</span></a></th>
+               <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                <span class="fs-inherit c-inherit">Duration</span></a></th>
+                <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                    <span class="fs-inherit c-inherit">Arrival</span></a></th>
+                   <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                    <span class="fs-inherit c-inherit">Price</span></a></th>
+               <td></td>
+            </tr>
+           
+           </table>
+           <table class="tabprop">
+               <tr>
+                <li *ngFor="let a of flights;index as i;">
+
+                   
+                    <td>
+                        <span class="txt-r2-n " >{{a.airlineName}}</span><br>
+                        <span class="txt-r3-n " >{{a.flightNumber}}</span>
+                       </td>
+                    <td>
+                         <span class="txt-r2-n " >{{a.startTime}}</span><br>
+                         <span class="txt-r3-n " >{{a.depature}}</span>
+                        </td>
+                    <td> 
+                        <span class="dura_md ng-binding" >{{a.duration}}</span>
+                        <div class="arrow-md-lm"></div>
+                        <span class="dura_md2 ng-scope" >1-stop</span>
+                    
+                    </td>
+                    <td> 
+                        <span class="txt-r2-n ng-binding" >{{a.endTime}}</span><br>
+                        <span class="txt-r3-n ng-binding"   >{{a.arrival}}</span>
+
+                    </td>
+                     
+                    <td>  {{a.price}}</td>
+                    
+                    <td>
+                        <div class="header">
+                            <nav>
+                              <a  class="active" routerLink="/booking" [queryParams]="{ fromLoc:a.depature , toLoc:a.arrival}" >Book Flight</a> 
+                            </nav>
+                           </div>
+
+                    </td>
+                    </li>
+               </tr>
+           </table>
+           
+       </div>
+   </div>
+   </div>
+   
+   <router-outlet></router-outlet>

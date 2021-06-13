@@ -1,0 +1,29 @@
+
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   
+   <div class="clr"></div>
+    
+  <div class="container">
+    <div class="action">
+      
+     
+      <input type="text" id="uname" name="uname" placeholder="User Name" #uname><br><br>
+     
+      <input type="password" id="pwd" name="pwd" placeholder="Password.." #pwd><br><br>  
+      <button (click)="login()" ></button>
+      <div class="header">
+        <nav>
+          <a  class="active" 
+          routerLink="/result" [queryParams]="{ uName:uname.value, pwd:pwd.value}">Login</a> 
+        </nav>
+       </div>
+      </div>
+  </div>
+  
+  
+  </div>
+  </div>
+
+  
+  <router-outlet></router-outlet>

@@ -1,0 +1,51 @@
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1> Add Flight</h1> 
+   <div class="clr"></div>
+    
+<div class="container">
+   
+      
+      
+      <input type="text" id="airlineName" placeholder="Airline name.." [(ngModel)]='flight.airlineName'>
+  
+      
+      <input type="text"  id="depature" placeholder="Depature.." [(ngModel)]='flight.depature'>
+     
+      <input type="text" id="arrival" placeholder="Arrival.." [(ngModel)]='flight.arrival'>
+    
+      <input type="text" id="startTime" placeholder="Start Time.." [(ngModel)]='flight.startTime'>
+     
+      <input type="text" id="endTime" placeholder="End Time.." [(ngModel)]='flight.endTime'>
+
+
+    
+      <input type="text" id="flightNumber" placeholder="Flight Number.." [(ngModel)]='flight.flightNumber'>
+      
+      <input type="text" id="duration" placeholder="Duration.." [(ngModel)]='flight.duration'>
+    
+      <input type="number" id="price" placeholder="Price.." [(ngModel)]='flight.price'>
+      <label for="lname">Meal Preference</label>
+      <select value="meal" id="meals" [(ngModel)]='flight.meals'>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+      </select>    
+      
+
+      <label for="lname">Date</label>
+      <input type="date" id="travelDate" placeholder="Date.." [(ngModel)]='flight.travelDate'>
+
+
+
+
+      <div class="header">
+        <nav>
+           <button class="active" type = "submit" (click)='save()'>Add Flight</button>
+        </nav>
+     
+      </div>
+  </div>
+
+
+</div>
+</div>

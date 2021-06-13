@@ -1,0 +1,43 @@
+  
+<div class="top_bg_ofr_sb">
+  <div class="middle_sec_sb">
+ <h1>Ticket Booking</h1> 
+ <div class="one-rou">
+  <input name="Trip" id="Trip" class="hide-round one_rou_click" value="One" checked="checked" type="radio" style="display: none;">
+  <input name="Trip" id="radio1" class="hide-round2 rund" value="Two" type="radio" style="display: none;">
+  <input name="Trip" id="rdoMul" class="hide-round2 rund" value="Mul" type="radio" style="display: none;">
+  <ul>
+      <li class="border-lft flig-show click-one bg-color" onclick="setType('O');">One-Way </li>
+      <li class="click-round flig-show" onclick="setType('R');">Round-Trip</li>
+      <!--li class="click-mul border-rht mul-hid" onclick="setType('M')">Multi-City</li-->
+  </ul>
+</div>
+<div class="clr"></div>
+   <div class="tab-content">
+
+    
+    
+    
+ <h2></h2>
+ 
+ <div class="s_col_1  mgr20"></div>
+ 
+ To Location<input type="text" placeholder="Name" ><br><br>
+ Depature<input type="date" placeholder="Name" ><br><br>
+ return<input type="date" placeholder="Name" ><br><br>
+ Travellers<input type="number" placeholder="Name" ><br><br>
+ Class<input type="trext" placeholder="Name" ><br><br>
+ <div class="header">
+  <nav>
+    <a  class="active" routerLink="/result" >Search Flights</a> 
+  </nav>
+ </div>
+ 
+
+</div>
+ 
+ 
+ </div>
+  </div>
+
+  <router-outlet></router-outlet>

@@ -1,0 +1,91 @@
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1> Manage Schedule</h1> 
+   <div class="clr"></div>
+   <div class="tab-content">
+    <div class="header">
+        <nav>
+          <a  class="active" routerLink="/addflight" >Add Flight</a> 
+        </nav>
+       </div>
+       <div class="clr"></div>
+           <table class="tabprop">
+               <tr>
+                <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                    <span class="fs-inherit c-inherit" id="flightId" #flightId>FlightId</span></a></th>
+                  
+               <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                <span class="fs-inherit c-inherit">AirlLineName</span></a></th>
+               <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                <span class="fs-inherit c-inherit">Depature</span></a></th>
+               <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                <span class="fs-inherit c-inherit">Duration</span></a></th>
+                <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                    <span class="fs-inherit c-inherit">Arrival</span></a></th>
+                   <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                    <span class="fs-inherit c-inherit">Price</span></a></th>
+                    <th> <a class="hover:c-secondary-500 c-neutral-700 fw-500 td-none" style="cursor: pointer;">
+                        <span class="fs-inherit c-inherit" id="flightNumber" #flightNumber>Flight Number</span></a></th>
+                        <th></th>
+                        <th></th>
+            </tr>
+           
+           </table>
+       
+        
+
+           <table class="tabprop">
+               <tr>
+                <li *ngFor="let a of flights;index as i;">
+                    <td>
+                        <span class="txt-r2-n " >{{a.flightId}}</span><br>
+                        </td>
+                   
+                    <td>
+                        <span class="txt-r2-n " >{{a.airlineName}}</span><br>
+                        <span class="txt-r3-n " >{{a.flightNumber}}</span>
+                       </td>
+                    <td>
+                         <span class="txt-r2-n " >{{a.startTime}}5</span><br>
+                         <span class="txt-r3-n " >{{a.depature}}</span>
+                        </td>
+                    <td> 
+                        <span class="dura_md ng-binding" >{{a.duration}}</span>
+                        <div class="arrow-md-lm"></div>
+                        <span class="dura_md2 ng-scope" >1-stop</span>
+                    
+                    </td>
+                    <td> 
+                        <span class="txt-r2-n ng-binding" >{{a.endTime}}</span><br>
+                        <span class="txt-r3-n ng-binding"   >{{a.arrival}}</span>
+
+                    </td>
+                     
+                    <td>  {{a.price}}</td>
+                    <td > {{a.flightNumber}}</td>
+                    <td>
+                        <div class="header">
+                            <nav>
+                              <a  class="active" routerLink="/update" 
+                               [queryParams]="{ flightId:a.flightId}">Update Flight</a> 
+                            </nav>
+                           </div>
+
+                    </td>
+                    <td>
+                        <div class="header">
+                            <nav>
+                              <button class="active" (click)="deleteFlight(a.flightId)" >Delete Flight</button>
+                            </nav>
+                           </div>
+
+                    </td>
+                    </li>
+               </tr>
+           </table>
+           
+       </div>
+   </div>
+   </div>
+   
+   <router-outlet></router-outlet>

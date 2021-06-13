@@ -1,0 +1,30 @@
+<div class="top_bg_ofr_sb">
+    <div class="middle_sec_sb">
+   <h1> Add Airline</h1> 
+   <div class="clr"></div>
+   <div class="container">
+    
+      
+        <label for="fname">Airline Name</label>
+        <input type="text"  placeholder="Airline name.."   [(ngModel)]='airline.airlineName'>
+    
+        <label for="lname">Upload Logo</label>
+        <input type="file"  placeholder="UploadLogo.." [(ngModel)]='airline.logo'><br><br>
+        <label for="lname">Contact Number</label>
+        <input type="email" placeholder="Contact Number.." [(ngModel)]='airline.contactNumber'>
+        
+        <label for="lname">Contact Address</label>
+        <input type="email" placeholder="Contact Address.." [(ngModel)]='airline.contactAddress'>
+        <label for="lname">Flight Number</label>
+        <input type="text"  placeholder="Flight Number.."  [(ngModel)]='airline.flightNumber'>
+        <div class="header">
+          <nav>
+            <a  class="active"> <button (click)='save()'>Add New Airline</button></a>
+          </nav>
+         
+  
+        </div>
+  </div>
+
+   </div>
+   </div>

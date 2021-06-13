@@ -1,0 +1,55 @@
+<div class="top_bg_ofr_sb">
+  <div class="middle_sec_sb">
+ <h1> Flight Ticket Booking</h1> 
+ <div class="clr"></div>
+  
+<div class="container">
+  <div class="action">
+    <input type="radio" #way>One Way
+    <input type="radio" #way>Round Trip <br><br>
+    <label for="fname">From Location</label>
+    <select value="from "  id="from"
+    placeholder="from location" [(ngModel)]='searchFlight.fromLocation' #from>
+          <option value="Bengalore">Bengalore</option>
+          <option value="Hyderabad">Hyderabad</option>
+    </select>
+    
+    <label for="fname">To Location</label>
+    <select value="to "  id="to"
+    placeholder="Name" [(ngModel)]='searchFlight.toLocation' #to >
+          <option value="Bengalore">Bengalore</option>
+          <option value="Hyderabad">Hyderabad</option>
+    </select>
+    <label for="lname">Depature</label>
+    <input type="date" id="lname" name="lastname" placeholder="Depature..">
+    <label for="lname">Return</label>
+    <input type="date" id="lname" name="lastname" placeholder="Return.."><br><br>
+    
+    <label for="lname">Travellers</label>
+    <input type="number" id="lname" name="lastname" placeholder="Travllers.."><br><br>
+    <label for="lname">Class</label>
+    <select value="class "  id="class">
+          <option value="Business">Business</option>
+          <option value="Economic">Econimic</option>
+    </select><br><br>
+ 
+    <div class="header">
+      <nav>
+        <a  class="active" 
+        routerLink="/result" [queryParams]="{ fromLoc:from.value , toLoc:to.value}">Search Flights</a> 
+      </nav>
+     </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
